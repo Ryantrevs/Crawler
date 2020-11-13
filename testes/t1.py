@@ -1,11 +1,13 @@
 from Configuracoes import navegador
 import time
+from Configuracoes.changeMac import mac
 
 sites = []
 
 def main():
     f = open('./data/example1.txt', 'r', encoding='utf8')
     lista = f.readlines()
+    mac.iniciar()
     nav = navegador.confNav()
     navegador.digitarSite(nav,'https://www.myip.com/')
     time.sleep(5)
@@ -21,7 +23,7 @@ def main():
     #elemento1 = navegador.elemento(nav,'//*[@id="tads"]/div[2]/div/div/div[1]/a/')
     #navegador.click(elemento1)
 
-    navegador.input(nav)
+    navegador.google(nav)
     time.sleep(100)
     
 

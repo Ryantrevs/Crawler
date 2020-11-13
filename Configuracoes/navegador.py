@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 def confNav():
     opt = opcoes.configurar()
-    navegador = webdriver.Chrome(options=opt, executable_path=r'C:\ProgramData\chocolatey\bin\chromedriver.exe')
+    navegador = webdriver.Chrome(options=opt, executable_path=r'/home/patrick/Documentos/chromedriver')
     navegador.maximize_window()
     navegador.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     navegador.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
